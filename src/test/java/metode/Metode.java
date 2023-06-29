@@ -53,5 +53,10 @@ public class Metode extends TestBase {
         builder.moveToElement(element).build().perform();
     }
 
-
+    public void denySubscribingToNews() throws InterruptedException {
+        driver.switchTo().frame("lightbox_iframe");
+        driver.findElement(By.id("lightbox_sign")).click();
+        Thread.sleep(2000);
+        driver.switchTo().defaultContent();
+    }
 }

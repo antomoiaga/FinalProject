@@ -3,16 +3,16 @@ package testCases;
 import com.aventstack.extentreports.Status;
 import common.TestBase;
 import org.testng.annotations.Test;
+import pages.ActivityPage;
 import pages.CartepediaShopPage;
-import pages.EarthPage;
 import pages.HomePage;
 
-public class AddEarthToCart_TC9 extends TestBase {
+public class AddActivityToCart_TC10 extends TestBase {
 
 
     @Test()
-    public void add_earth_to_cart() throws InterruptedException {
-        test = extent.createTest("add earth  to cart", "Case 9: User is able to add earth to cart")
+    public void add_activity_to_cart() throws InterruptedException {
+        test = extent.createTest("add Activity  to cart", "Case 10: User is able to add Activity to cart")
                 .assignCategory("Functional_testcase")
                 .assignAuthor("QA team");
 
@@ -31,20 +31,18 @@ public class AddEarthToCart_TC9 extends TestBase {
         test.log(Status.INFO, "Click on the Shop Button(Homepage)");
         logger.info("Click on the Shop Button(Homepage)");
 
-        metode.waitForElementToBeClickable(CartepediaShopPage.Earth);
+        metode.waitForElementToBeClickable(CartepediaShopPage.ActivityGame);
         metode.denySubscribingToNews();
         test.log(Status.INFO, "Click on the No Thank you button when asked to subscribe to the news(CartepediaShopPage)");
         logger.info("Click on the No Thank you button when asked to subscribe to the news(CartepediaShopPage)");
 
-        metode.clickOnButton(CartepediaShopPage.Earth);
-        test.log(Status.INFO, "Click on the Earth (CartepediaShopPage)");
-        logger.info("Click on the Earth (CartepediaShopPage)");
-
+        metode.clickOnButton(CartepediaShopPage.ActivityGame);
+        test.log(Status.INFO, "Click on the Activity Game (CartepediaShopPage)");
+        logger.info("Click on the Activity Game (CartepediaShopPage)");
 
         metode.denySubscribingToNews();
-       metode.waitForElementToBeClickable(EarthPage.AddToCartEarthBtn);
-
-       metode.clickOnButton(EarthPage.AddToCartEarthBtn);
+        metode.clickOnButton(ActivityPage.AddToCartActivity);
+        test.log(Status.INFO, "Click on the add to cart the Activity Game (ActivityPage)");
+        logger.info("Click on the add to cart the Activity Game (ActivityPage)");
     }
 }
-
