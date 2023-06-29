@@ -9,7 +9,7 @@ import pages.HomePage;
 public class SearchByBookName_TC4 extends TestBase {
 
     @Test()
-    public void search_by_book_name(){
+    public void search_by_book_name() throws InterruptedException {
 
         test = extent.createTest("search books by book name", "Case 4: User is able to search books by book name")
                 .assignCategory("Functional_testcase")

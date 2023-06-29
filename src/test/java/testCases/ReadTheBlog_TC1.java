@@ -4,8 +4,8 @@ import com.aventstack.extentreports.Status;
 import common.TestBase;
 import org.testng.annotations.Test;
 import pages.BlogPage;
+import pages.CalliePage;
 import pages.HomePage;
-import pages.MiculPrietenPage;
 
 
 public class ReadTheBlog_TC1 extends TestBase {
@@ -32,24 +32,24 @@ public class ReadTheBlog_TC1 extends TestBase {
         logger.info("Click on the Blog button(Homepage)");
 
         metode.waitForElementToBeVisible(BlogPage.BlogulCartepediaImage);
-        metode.scrollDown(BlogPage.MiculPrietenRecommendation);
+        metode.scrollDown(BlogPage.CallieRecommendation);
         test.log(Status.INFO, "Scroll down to the MiculPrietenRecommendation(BlogPage)");
         logger.info("Scroll down to the MiculPrietenRecommendation(BlogPage)");
 
-        metode.waitForElementToBeVisible(BlogPage.MiculPrietenRecommendation);
-        metode.assertTheText(BlogPage.MiculPrietenRecommendation, "Micul prieten");
+        metode.waitForElementToBeVisible(BlogPage.CallieRecommendation);
+        metode.assertTheText(BlogPage.CallieRecommendation, "Callie");
         test.log(Status.INFO, "Scroll down to the MiculPrietenRecommendation(BlogPage)");
         logger.info("Scroll down to the MiculPrietenRecommendation(BlogPage)");
 
-        metode.waitForElementToBeClickable(BlogPage.MiculPrietenRecommendation);
-        metode.clickOnButton(BlogPage.MiculPrietenRecommendation);
-        test.log(Status.INFO, "Click on MiculPrietenRecommendation button(BlogPage)");
-        logger.info("Click on MiculPrietenRecommendation button(BlogPage)");
+        metode.waitForElementToBeClickable(BlogPage.CallieRecommendation);
+        metode.clickOnButton(BlogPage.CallieRecommendation);
+        test.log(Status.INFO, "Click on CallieRecommendation button(BlogPage)");
+        logger.info("Click on CallieRecommendation button(BlogPage)");
 
-        metode.scrollDown(MiculPrietenPage.MiculPrietenText);
-        metode.waitForElementToBeVisible(MiculPrietenPage.MiculPrietenText);
-        metode.assertTheText(MiculPrietenPage.MiculPrietenText, "Provocarea protagonistei Harriet este aceea de a aduce");
-        test.log(Status.INFO, "Assert the sentence from Micul Prieten Recommendation(MiculPrietenPage)");
-        logger.info("Assert the sentence from Micul Prieten Recommendation(MiculPrietenPage)");
+       metode.scrollDown(CalliePage.CallieText);
+      metode.waitForElementToBeVisible(CalliePage.CallieText);
+       metode.assertTheText(CalliePage.CallieText, "Jessica Sorensen");
+       test.log(Status.INFO, "Assert the sentence from Callie Recommendation(CalliePage)");
+       logger.info("Assert the sentence from Callie Recommendation(CalliePage)");
     }
 }

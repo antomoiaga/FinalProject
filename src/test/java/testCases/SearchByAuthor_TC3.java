@@ -9,7 +9,7 @@ import pages.MurakamiPage;
 public class SearchByAuthor_TC3 extends TestBase {
 
     @Test()
-    public void search_by_author() {
+    public void search_by_author() throws InterruptedException {
 
         test = extent.createTest("search by author", "Case 3: User is able to search books by author")
                 .assignCategory("Functional_testcase")

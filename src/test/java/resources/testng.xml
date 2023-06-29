@@ -3,7 +3,7 @@
 <suite name="TestSuite">
     <test name="ChromeTest" enabled="true">
         <classes>
-            <class name="testCases.ReadTheBlog_TC1"/>
+            <class name="testCases.SearchByAuthor_TC3"/>
         </classes>
     </test>
 <!--    <test name="FirefoxTests" enabled="false">-->

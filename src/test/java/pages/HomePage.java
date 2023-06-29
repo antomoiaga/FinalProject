@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class HomePage {
 
-    public static By LibrarPersonalizatBtn = By.linkText("Librar personalizat");
+    public static By LibrarPersonalizatBtn = By.xpath("//span[contains(.,'Librar personalizat')]");
 
     public static By BlogBtn = By.xpath("/html/body/div[2]/div[2]/ul/li[3]/a/span");
 
@@ -23,4 +23,10 @@ public class HomePage {
     public static By CrimeGenreBtn = By.xpath("/html/body/div[2]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/a[14]");
 
     public static By DiscountsBtn = By.xpath("/html/body/div[2]/div[2]/ul/li[1]/a/span");
+
+    public static By ShopBtn = By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/div[5]/a");
+
+    public static By PuzzleBtn = By.xpath("/html/body/div[2]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/a[10]");
+
+
 }

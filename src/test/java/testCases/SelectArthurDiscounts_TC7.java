@@ -11,7 +11,7 @@ import pages.HomePage;
 public class SelectArthurDiscounts_TC7 extends TestBase {
 
     @Test()
-    public void select_arthur_discounts(){
+    public void select_arthur_discounts() throws InterruptedException {
         test = extent.createTest("select books with discounts from the Arthur publishing house", "Case 7: User is able to select the page with discounts for the Arthur publishing house")
                 .assignCategory("Functional_testcase")
                 .assignAuthor("QA team");

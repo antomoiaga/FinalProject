@@ -29,7 +29,7 @@ public class Metode extends TestBase {
     public void scrollDown(By locator){
         WebElement element = driver.findElement(locator);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", element);
+        js.executeScript("arguments[0].scrollIntoViewIfNeeded();", element);
     }
 
     public void waitForElementToBeClickable(By locator){
