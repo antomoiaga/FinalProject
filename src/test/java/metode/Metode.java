@@ -53,6 +53,10 @@ public class Metode extends TestBase {
         builder.moveToElement(element).build().perform();
     }
 
+    public void checkImageIsDisplayed(By locator){
+        WebElement element = driver.findElement(locator);
+        element.isDisplayed();
+    }
     public void denySubscribingToNews() throws InterruptedException {
         driver.switchTo().frame("lightbox_iframe");
         driver.findElement(By.id("lightbox_sign")).click();

@@ -26,7 +26,7 @@ public class HomePage {
 
     public static By ShopBtn = By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/div[5]/a");
 
-    public static By PuzzleBtn = By.xpath("/html/body/div[2]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/a[10]");
+    public static By ContactBtn = By.xpath("/html/body/div[2]/div[2]/ul/li[11]/a/span");
 
 
 }
