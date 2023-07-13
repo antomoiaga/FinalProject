@@ -2,6 +2,7 @@ package testCases;
 
 import com.aventstack.extentreports.Status;
 import common.TestBase;
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import pages.BlogPage;
 import pages.CalliePage;
@@ -20,6 +21,8 @@ public class ReadTheBlog_TC1 extends TestBase {
         openURL("https://www.cartepedia.ro/?gclid=CjwKCAjw-IWkBhBTEiwA2exyO2VKZJfeTZ0v7qKN0KFyxpqFaoDb1_XtEmAtCAcsqENCvtVm-YxmcRoCGMMQAvD_BwE");
         test.log(Status.INFO, "Open URL");
         logger.info("Open URL");
+        metode.clickOnButton(By.cssSelector(".close_cookie_bar"));
+        metode.clickOnButton(By.id("closeCounter"));
 
         metode.waitForElementToBeVisible(HomePage.LibrarPersonalizatBtn);
         metode.assertTheText(HomePage.LibrarPersonalizatBtn, "Librar personalizat");

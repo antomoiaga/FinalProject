@@ -2,6 +2,7 @@ package testCases;
 
 import com.aventstack.extentreports.Status;
 import common.TestBase;
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import pages.CartPage;
 import pages.HomePage;
@@ -19,6 +20,8 @@ public class AddBooksToCart_TC8 extends TestBase {
        openURL("https://www.cartepedia.ro/?gclid=CjwKCAjw-IWkBhBTEiwA2exyO2VKZJfeTZ0v7qKN0KFyxpqFaoDb1_XtEmAtCAcsqENCvtVm-YxmcRoCGMMQAvD_BwE");
        test.log(Status.INFO, "Open URL");
        logger.info("Open URL");
+       metode.clickOnButton(By.cssSelector(".close_cookie_bar"));
+       metode.clickOnButton(By.id("closeCounter"));
 
        metode.waitForElementToBeClickable(HomePage.SearchBookOrAuthorField);
        metode.clickOnButton(HomePage.SearchBookOrAuthorField);

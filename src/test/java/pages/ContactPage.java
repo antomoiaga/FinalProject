@@ -8,5 +8,5 @@ public class ContactPage {
 
     public static By EmailAddress = By.xpath("/html/body/div[4]/div/div[4]/div[2]/div/div[3]/div[10]");
 
-    public static By VouchersBtn = By.xpath("/html/body/div[4]/div/div[3]/div/div[1]/div[5]/a");
+    public static By VouchersBtn = By.linkText("Voucherele Cartepedia");
 }

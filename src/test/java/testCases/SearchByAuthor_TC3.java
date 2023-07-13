@@ -2,6 +2,7 @@ package testCases;
 
 import com.aventstack.extentreports.Status;
 import common.TestBase;
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.MurakamiPage;
@@ -21,6 +22,7 @@ public class SearchByAuthor_TC3 extends TestBase {
         logger.info("Open URL");
 
         metode.waitForElementToBeClickable(HomePage.SearchBookOrAuthorField);
+
         metode.clickOnButton(HomePage.SearchBookOrAuthorField);
         test.log(Status.INFO, "Click on the Search Book Or Author Field(Homepage)");
         logger.info("Click on the Search Book Or Author Field(Homepage)");

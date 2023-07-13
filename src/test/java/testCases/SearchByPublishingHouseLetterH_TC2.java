@@ -2,6 +2,7 @@ package testCases;
 
 import com.aventstack.extentreports.Status;
 import common.TestBase;
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import pages.HPublishingHouses;
 import pages.HomePage;
@@ -11,7 +12,7 @@ import pages.PublishingHousesPage;
 public class SearchByPublishingHouseLetterH_TC2 extends TestBase  {
 
     @Test()
-    public void search_by_publishing_house_letter_h() {
+    public void search_by_publishing_house_letter_h() throws InterruptedException {
         test = extent.createTest("search books by publishing house", "Case 2: User is able to search books by publishing house starting with letter H")
                 .assignCategory("Functional_testcase")
                 .assignAuthor("QA team");
@@ -20,8 +21,11 @@ public class SearchByPublishingHouseLetterH_TC2 extends TestBase  {
         openURL("https://www.cartepedia.ro/?gclid=CjwKCAjw-IWkBhBTEiwA2exyO2VKZJfeTZ0v7qKN0KFyxpqFaoDb1_XtEmAtCAcsqENCvtVm-YxmcRoCGMMQAvD_BwE");
         test.log(Status.INFO, "Open URL");
         logger.info("Open URL");
+        metode.clickOnButton(By.cssSelector(".close_cookie_bar"));
+        metode.clickOnButton(By.id("closeCounter"));
 
         metode.waitForElementToBeClickable(HomePage.PublishingHousesBtn);
+
         metode.clickOnButton(HomePage.PublishingHousesBtn);
         test.log(Status.INFO, "Click on the Publishing House Button(Homepage)");
         logger.info("Click on the Publishing House Button(Homepage)");
@@ -30,6 +34,8 @@ public class SearchByPublishingHouseLetterH_TC2 extends TestBase  {
         metode.clickOnButton(PublishingHousesPage.HPublishingHousesBtn);
         test.log(Status.INFO, "Click on the H Publishing House Button(PublishingHousesPage)");
         logger.info("Click on the H Publishing House Button(PublishingHousesPage)");
+
+
 
         metode.waitForElementToBeClickable(HPublishingHouses.HumanitasBtn);
         metode.clickOnButton(HPublishingHouses.HumanitasBtn);

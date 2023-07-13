@@ -2,6 +2,7 @@ package testCases;
 
 import com.aventstack.extentreports.Status;
 import common.TestBase;
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import pages.ActivityPage;
 import pages.CartepediaShopPage;
@@ -20,6 +21,8 @@ public class AddActivityToCart_TC10 extends TestBase {
         openURL("https://www.cartepedia.ro/?gclid=CjwKCAjw-IWkBhBTEiwA2exyO2VKZJfeTZ0v7qKN0KFyxpqFaoDb1_XtEmAtCAcsqENCvtVm-YxmcRoCGMMQAvD_BwE");
         test.log(Status.INFO, "Open URL");
         logger.info("Open URL");
+        metode.clickOnButton(By.cssSelector(".close_cookie_bar"));
+        metode.clickOnButton(By.id("closeCounter"));
 
         metode.waitForElementToBeVisible(HomePage.CartepediaBanner);
         metode.hoverOverElements(HomePage.CartepediaBanner);
@@ -40,6 +43,7 @@ public class AddActivityToCart_TC10 extends TestBase {
         test.log(Status.INFO, "Click on the Activity Game (CartepediaShopPage)");
         logger.info("Click on the Activity Game (CartepediaShopPage)");
 
+        Thread.sleep(2000);
         metode.denySubscribingToNews();
         metode.clickOnButton(ActivityPage.AddToCartActivity);
         test.log(Status.INFO, "Click on the add to cart the Activity Game (ActivityPage)");

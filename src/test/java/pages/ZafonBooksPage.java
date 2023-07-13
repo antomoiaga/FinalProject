@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class ZafonBooksPage {
 
-    public static By OrasulDeAburBook = By.xpath("/html/body/div[4]/div/div[4]/div[5]/div[4]/a[1]/picture/img");
+    public static By OrasulDeAburBook = By.cssSelector("body > div.content_wrapper > div > div.page_content.page_content_subcat > div.items > div:nth-child(6) > a:nth-child(1) > picture > img");
 
     public static By BuyOrasulDeAburBtn = By.id("add_prod_b_224662");
 
