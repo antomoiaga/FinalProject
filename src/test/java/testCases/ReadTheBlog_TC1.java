@@ -5,7 +5,7 @@ import common.TestBase;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import pages.BlogPage;
-import pages.CalliePage;
+import pages.AndEveryMorningPage;
 import pages.HomePage;
 
 
@@ -35,24 +35,24 @@ public class ReadTheBlog_TC1 extends TestBase {
         logger.info("Click on the Blog button(Homepage)");
 
         metode.waitForElementToBeVisible(BlogPage.BlogulCartepediaImage);
-        metode.scrollDown(BlogPage.CallieRecommendation);
-        test.log(Status.INFO, "Scroll down to the MiculPrietenRecommendation(BlogPage)");
-        logger.info("Scroll down to the MiculPrietenRecommendation(BlogPage)");
+        metode.scrollDown(BlogPage.AndEveryMorningRecommendation);
+        test.log(Status.INFO, "Scroll down to the AndEveryMorningRecommendation(BlogPage)");
+        logger.info("Scroll down to the AndEveryMorningRecommendation(BlogPage)");
 
-        metode.waitForElementToBeVisible(BlogPage.CallieRecommendation);
-        metode.assertTheText(BlogPage.CallieRecommendation, "Callie");
-        test.log(Status.INFO, "Scroll down to the MiculPrietenRecommendation(BlogPage)");
-        logger.info("Scroll down to the MiculPrietenRecommendation(BlogPage)");
+        metode.waitForElementToBeVisible(BlogPage.AndEveryMorningRecommendation);
+        metode.assertTheText(BlogPage.AndEveryMorningRecommendation, "drumul spre");
+        test.log(Status.INFO, "Scroll down to the AndEveryMorningRecommendation(BlogPage)");
+        logger.info("Scroll down to the AndEveryMorningRecommendation(BlogPage)");
 
-        metode.waitForElementToBeClickable(BlogPage.CallieRecommendation);
-        metode.clickOnButton(BlogPage.CallieRecommendation);
-        test.log(Status.INFO, "Click on CallieRecommendation button(BlogPage)");
-        logger.info("Click on CallieRecommendation button(BlogPage)");
+        metode.waitForElementToBeClickable(BlogPage.AndEveryMorningRecommendation);
+        metode.clickOnButton(BlogPage.AndEveryMorningRecommendation);
+        test.log(Status.INFO, "Click on AndEveryMorningRecommendation button(BlogPage)");
+        logger.info("Click on AndEveryMorningRecommendation button(BlogPage)");
 
-       metode.scrollDown(CalliePage.CallieText);
-      metode.waitForElementToBeVisible(CalliePage.CallieText);
-       metode.assertTheText(CalliePage.CallieText, "Jessica Sorensen");
-       test.log(Status.INFO, "Assert the sentence from Callie Recommendation(CalliePage)");
-       logger.info("Assert the sentence from Callie Recommendation(CalliePage)");
+       metode.scrollDown(AndEveryMorningPage.EveryMorningText);
+      metode.waitForElementToBeVisible(AndEveryMorningPage.EveryMorningText);
+       metode.assertTheText(AndEveryMorningPage.EveryMorningText, "Fredrik Backman");
+       test.log(Status.INFO, "Assert the sentence from EveryMorningText(AndEveryMorningPage)");
+       logger.info("Assert the sentence from EveryMorningText(AndEveryMorningPage)");
     }
 }
